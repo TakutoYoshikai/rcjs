@@ -2,6 +2,12 @@
 rc.js is a remote controller framework.
 
 ### Usage
+
+**install**
+```bash
+npm install TakutoYoshikai/rcjs
+```
+**example**
 ```javascript
 const Remocon = require("rcjs");
 
