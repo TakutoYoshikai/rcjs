@@ -23,7 +23,7 @@ function Remocon() {
   app.set("view engine", "ejs");
   let modules = {};
   app.get("/", function(req, res) {
-    res.render(__dirname + "/index.ejs", {
+    res.render(__dirname + "/views/index.ejs", {
       modules: modules
     });
   })
