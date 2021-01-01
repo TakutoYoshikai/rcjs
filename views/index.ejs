@@ -5,6 +5,22 @@
         <title></title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <style>
+          button {
+            border-radius: 0;
+            -webkit-box-sizing: content-box;
+            -webkit-appearance: button;
+            appearance: button;
+            border: none;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+          button::-webkit-search-decoration {
+            display: none;
+          }
+          button::focus {
+            outline-offset: -2px;
+          }
+
           .columns {
             column-count: 3;
             column-gap: 16px;
@@ -16,6 +32,8 @@
             width: 100%;
             height: 100px;
             font-size: 16px;
+            background-color: gray;
+            color: white;
           }
         </style>
         <script>
