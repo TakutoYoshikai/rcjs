@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+      <script>
+        function EncodeHTMLForm( data ) {
+          var params = [];
+
+          for( var name in data )
+          {
+            var value = data[ name ];
+            var param = encodeURIComponent( name ) + '=' + encodeURIComponent( value );
+
+            params.push( param );
+          }
+
+          return params.join( '&' ).replace( /%20/g, '+' );
+        }
+        function post(id) {
+          let request = new XMLHttpRequest();
+          request.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status !== 200) {
+              alert("failed");
+            }
+          }
+          request.open("POST", "/event");
+          request.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+          request.send(EncodeHTMLForm({id:id}));
+        }
+      </script>
+    </head>
+    <body>
+      <% for (let id in modules) { %>
+        <% if (modules[id].type == "button") { %>
+          <button onclick="post('<%- id %>');"><%- modules[id].title %></button>
+        <% } %>
+      <% } %>
+    </body>
+</html>
