@@ -17,7 +17,7 @@ remocon.addButton("event id", "button title", function() {
   console.log("do something");
 });
 
-remocon.app.listen(3000);
+remocon.app.listen(3000); //run server on 3000 port
 ```
 
 ### License
