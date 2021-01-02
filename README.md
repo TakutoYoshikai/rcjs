@@ -1,5 +1,5 @@
 # rc.js
-rc.js is a remote controller framework.
+rc.js is a simple remote controller framework.
 
 ### Usage
 
