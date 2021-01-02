@@ -1,6 +1,11 @@
 const RemoconModuleType = {
   BUTTON: "button",
 }
+
+function randomString(n) {
+  var s="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  Array.from(Array(n)).map(()=>S[Math.floor(Math.random()*S.length)]).join('')
+}
 class RemoconModule {
   constructor(id, type) {
     this.id = id;
@@ -31,7 +36,8 @@ function Remocon() {
     modules[req.body.id].callback();
     res.status(200).send("");
   });
-  this.addButton = function(id, title, callback) {
+  this.addButton = function(title, callback) {
+    let id = randomString(16);
     modules[id] = new Button(id, title, callback);
   }
   this.app = app;
