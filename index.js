@@ -41,6 +41,9 @@ function Remocon() {
     modules[id] = new Button(id, title, callback);
   }
   this.app = app;
+  this.start = function(port) {
+    this.app.listen(port);
+  }
 }
 
 module.exports = Remocon;
