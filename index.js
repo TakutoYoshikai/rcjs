@@ -24,7 +24,6 @@ class Button extends RemoconModule {
 function split(arr) {
   let result = [];
   for (let i in arr) {
-    console.log(i)
     if (i % 3 == 0) {
       result.push([]);
     }
