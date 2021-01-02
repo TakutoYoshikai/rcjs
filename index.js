@@ -4,7 +4,7 @@ const RemoconModuleType = {
 
 function randomString(n) {
   var s="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-  Array.from(Array(n)).map(()=>S[Math.floor(Math.random()*S.length)]).join('')
+  Array.from(Array(n)).map(()=>s[Math.floor(Math.random()*s.length)]).join('')
 }
 class RemoconModule {
   constructor(id, type) {
