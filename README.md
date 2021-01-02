@@ -13,7 +13,7 @@ const Remocon = require("rcjs");
 
 const remocon = new Remocon();
 
-remocon.addButton("event id", "button title", function() {
+remocon.addButton("button title", function() {
   console.log("do something");
 });
 
