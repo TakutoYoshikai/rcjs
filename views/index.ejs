@@ -21,15 +21,11 @@
             outline-offset: -2px;
           }
 
-          .columns {
-            column-count: 2;
-            column-gap: 16px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
+          table {
+            width: 100%;
           }
-          li {
-            margin-bottom: 16px;
+          td {
+            width: 30%;
           }
           button {
             width: 100%;
@@ -67,14 +63,18 @@
         </script>
     </head>
     <body>
-      <ul class="columns">
-        <% for (let id in modules) { %>
-          <% if (modules[id].type == "button") { %>
-            <li>
-              <button onclick="post('<%- id %>');"><%- modules[id].title %></button>
-            </li>
-          <% } %>
+      <table>
+        <% for (let row of modules) { %>
+          <tr>
+            <% for (let mod of row) { %>
+              <% if (mod.type == "button") { %>
+                <td>
+                  <button onclick="post('<%- mod.id %>');"><%- mod.title %></button>
+                </td>
+              <% } %>
+            <% } %>
+          </tr>
         <% } %>
-      </ul>
+      </table>
     </body>
 </html>
