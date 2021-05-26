@@ -1,6 +1,8 @@
 # rc.js
 rc.js is a simple remote controller framework.
 
+<img src="./rcjs.png" width="300px">
+
 ### Usage
 
 **install**
