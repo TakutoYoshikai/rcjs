@@ -48,7 +48,9 @@ function Remocon() {
     });
   })
   app.post("/event", function(req, res) {
-    findModule(modules, req.body.id).callback();
+    (async () {
+      findModule(modules, req.body.id).callback();
+    })();
     res.status(200).send("");
   });
   this.addButton = function(title, callback) {
