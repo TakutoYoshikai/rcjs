@@ -57,7 +57,7 @@ function Remocon() {
   }
   this.app = app;
   this.start = function(port) {
-    this.app.listen(port);
+    return this.app.listen(port);
   }
 }
 
